@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Infrastructure & Support Specialist | Professional Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#ecfeff',
+                            100: '#cffaff',
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            900: '#164e63',
+                        },
+                        darkbg: '#0f172a',
+                        darkcard: '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-darkbg text-slate-800 dark:text-slate-200 transition-colors duration-300 min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navigation Bar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-darkbg/80 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo / Name -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-brand-500 to-blue-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/20">
+                        <i class="fa-solid me-0.5 fa-server"></i>
+                    </div>
+                    <div>
+                        <a href="#home" class="font-bold text-lg text-slate-900 dark:text-white tracking-tight">Christian Magbanua</a>
+                        <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">IT Infrastructure & Support Specialist</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                    <a href="#about" class="text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">About</a>
+                    <a href="#skills" class="text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">Skills</a>
+                    <a href="#experience" class="text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">Experience</a>
+                    <a href="#certifications" class="text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">Certifications</a>
+                    <a href="#contact" class="text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Actions: Theme Toggle & Mobile Menu Btn -->
+                <div class="flex items-center space-x-3">
+                    <!-- Dark/Light Mode Toggle -->
+                    <button id="themeToggleBtn" aria-label="Toggle Theme" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors focus:outline-none">
+                        <i id="themeToggleIcon" class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="md:hidden p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors focus:outline-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-darkcard border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+            <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Skills</a>
+            <a href="#experience" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Experience</a>
+            <a href="#certifications" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Certifications</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <!-- Interactive Availability Badge -->
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-medium mb-6">
+                    <span class="relative flex h-2.5 w-2.5">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                    </span>
+                    Available for IT Infrastructure & Support Roles
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+                    Reliable Enterprise Systems & Infrastructure Operations
+                </h1>
+
+                <p class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
+                    IT Infrastructure Engineer & Technical Support Specialist with <span class="font-semibold text-brand-600 dark:text-brand-400">5+ years of experience</span> maintaining high system uptime, automating user provisioning, managing cloud/on-prem hybrid infrastructure, and optimizing technical operations.
+                </p>
+
+                <!-- Hero Action Buttons -->
+                <div class="mt-8 flex flex-wrap gap-4 items-center">
+                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-brand-500 hover:bg-brand-600 text-white font-semibold shadow-lg shadow-brand-500/25 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> Get In Touch
+                    </a>
+                    <button onclick="downloadResume()" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-darkcard hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold transition-all">
+                        <i class="fa-solid fa-file-arrow-down mr-2 text-brand-500"></i> Download Resume
+                    </button>
+                    <button onclick="copyEmail()" class="inline-flex items-center justify-center px-4 py-3 rounded-lg border border-dashed border-slate-300 dark:border-slate-700 hover:border-brand-500 dark:hover:border-brand-400 text-slate-600 dark:text-slate-400 hover:text-brand-500 text-sm font-medium transition-all">
+                        <i class="fa-solid fa-copy mr-2"></i> <span id="copyEmailText">Copy Email</span>
+                    </button>
+                </div>
+
+                <!-- Fast Info Badges -->
+                <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-200 dark:border-slate-800">
+                    <div>
+                        <p class="text-2xl font-bold text-slate-900 dark:text-white">99.9%</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Target Uptime Maintained</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-bold text-slate-900 dark:text-white">500+</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Endpoints Managed</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-bold text-slate-900 dark:text-white">5+ Yrs</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">IT Systems Experience</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-bold text-slate-900 dark:text-white">&lt;15 Min</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Average Incident Response</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <!-- Left Details -->
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-user-gear"></i> Professional Background
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">
+                        Bridging Technical Expertise & Operational Excellence
+                    </h2>
+                    <p class="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+                        I am a proactive Technical Support Specialist and IT Infrastructure Engineer skilled in designing, deploying, and maintaining multi-site computing environments. My core focus centers on minimizing service downtime, enforcing robust security protocols, and delivering high-touch end-user support.
+                    </p>
+                    <p class="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Whether provisioning cloud resources in Microsoft 365 / Azure, configuring Cisco routers and VLANs, managing Proxmox/VMware virtual clusters, or establishing ITIL-aligned ticket escalation workflows, I ensure IT systems function as a seamless foundation for business growth.
+                    </p>
+
+                    <!-- Key Focus Areas Grid -->
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-lg bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 flex items-start space-x-3">
+                            <i class="fa-solid fa-shield-halved text-brand-500 text-xl mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 dark:text-white text-sm">Security & Governance</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Active Directory GPO, Endpoint Security, MFA & Access Controls.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-lg bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 flex items-start space-x-3">
+                            <i class="fa-solid fa-cloud text-brand-500 text-xl mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 dark:text-white text-sm">Hybrid Cloud Architecture</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Microsoft 365 Admin, Azure AD, AWS EC2/S3 & On-prem servers.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-lg bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 flex items-start space-x-3">
+                            <i class="fa-solid fa-network-wired text-brand-500 text-xl mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 dark:text-white text-sm">Network Administration</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">VLAN segmentation, Firewall policies, VPNs & troubleshooting.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-lg bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 flex items-start space-x-3">
+                            <i class="fa-solid fa-headset text-brand-500 text-xl mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 dark:text-white text-sm">L2/L3 IT Operations</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Incident escalation, SLA adherence, hardware lifecycle & SLAs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Quick Spec Card -->
+                <div class="lg:col-span-5">
+                    <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden">
+                        <div class="absolute -top-12 -right-12 w-32 h-32 bg-brand-500/10 rounded-full blur-2xl"></div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4 border-b border-slate-200 dark:border-slate-800 pb-3">
+                            Infrastructure Snapshot
+                        </h3>
+                        
+                        <div class="space-y-4 text-sm">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-500 dark:text-slate-400">Primary Domain</span>
+                                <span class="font-medium text-slate-800 dark:text-slate-200">System Admin & NetOps</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-500 dark:text-slate-400">Operating Systems</span>
+                                <span class="font-medium text-slate-800 dark:text-slate-200">Windows Server, Linux (Debian/Ubuntu)</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-500 dark:text-slate-400">Cloud Environments</span>
+                                <span class="font-medium text-slate-800 dark:text-slate-200">M365, Azure, AWS</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-500 dark:text-slate-400">Virtualization</span>
+                                <span class="font-medium text-slate-800 dark:text-slate-200">Proxmox VE, VMware ESXi</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-500 dark:text-slate-400">Ticketing Platforms</span>
+                                <span class="font-medium text-slate-800 dark:text-slate-200">Jira Service Desk, ServiceNow, Freshservice</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-500 dark:text-slate-400">Location</span>
+                                <span class="font-medium text-slate-800 dark:text-slate-200">Remote / On-Site</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-500 dark:text-slate-400">Open to Full-time & Contract</span>
+                            <span class="px-2.5 py-1 text-xs font-semibold rounded bg-brand-500/10 text-brand-500">Verified Professional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Skills Section -->
+    <section id="skills" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <div class="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider mb-2">
+                    <i class="fa-solid fa-list-check"></i> Technical Proficiency
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">Core Technical Competencies</h2>
+                <p class="mt-3 text-slate-600 dark:text-slate-400">
+                    Comprehensive technical toolkit spanning modern IT operations, network setup, hardware provisioning, and cloud governance.
+                </p>
+
+                <!-- Skill Filter Tabs -->
+                <div class="mt-8 flex flex-wrap justify-center gap-2" id="skillFilterContainer">
+                    <button onclick="filterSkills('all')" class="skill-tab-btn active px-4 py-2 rounded-full text-sm font-medium transition-all bg-brand-500 text-white shadow-md">
+                        All Skills
+                    </button>
+                    <button onclick="filterSkills('sysadmin')" class="skill-tab-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700">
+                        Systems Admin
+                    </button>
+                    <button onclick="filterSkills('networking')" class="skill-tab-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700">
+                        Networking & Firewalls
+                    </button>
+                    <button onclick="filterSkills('cloud')" class="skill-tab-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700">
+                        Virtualization & Cloud
+                    </button>
+                    <button onclick="filterSkills('support')" class="skill-tab-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700">
+                        Support & Hardware
+                    </button>
+                </div>
+            </div>
+
+            <!-- Skill Cards Container -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="skillsGrid">
+                
+                <!-- Category 1: Systems Admin -->
+                <div class="skill-card p-6 rounded-xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all" data-category="sysadmin">
+                    <div class="w-12 h-12 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Systems Administration</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Core domain management, security policy enforcement, and OS environments.</p>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Windows Server 2016-2022</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Active Directory & GPO</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Domain Controller Config</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Microsoft 365 Suite Admin</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Linux Administration (Ubuntu/Debian)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> PowerShell Scripting & Automation</li>
+                    </ul>
+                </div>
+
+                <!-- Category 2: Networking -->
+                <div class="skill-card p-6 rounded-xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all" data-category="networking">
+                    <div class="w-12 h-12 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Networking & Security</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Routing, switching, firewall policies, and secure network segmentation.</p>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Cisco Routers & Switches (CCNA level)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> VLAN Config & Trunking</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Fortinet FortiGate Firewalls</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> VPN Setup (IPsec / SSL VPN)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> DHCP, DNS, TCP/IP, Subnetting</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Wireshark Network Analysis</li>
+                    </ul>
+                </div>
+
+                <!-- Category 3: Cloud & Virtualization -->
+                <div class="skill-card p-6 rounded-xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all" data-category="cloud">
+                    <div class="w-12 h-12 rounded-lg bg-purple-500/10 text-purple-500 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Cloud & Virtualization</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Hypervisors, cloud containerization, and offsite backups.</p>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Proxmox VE Environments</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> VMware ESXi & vCenter</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> AWS Infrastructure (EC2, S3, IAM)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Azure Active Directory / Entra ID</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Docker Basics & Containers</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Veeam Backup & Recovery</li>
+                    </ul>
+                </div>
+
+                <!-- Category 4: Support & Operations -->
+                <div class="skill-card p-6 rounded-xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all" data-category="support">
+                    <div class="w-12 h-12 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Support & Operations</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Endpoint maintenance, hardware repair, and ITIL SLAs.</p>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Ticket Systems (Jira/ServiceNow)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Endpoint Deployment (MDM/Intune)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Hardware Repair & Diagnostics</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> Structured Cabling & Rack Setup</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> IT Asset Management (ITAM)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-500 mr-2 text-xs"></i> End-User Training & Knowledge Base</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-16 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider mb-2">
+                    <i class="fa-solid fa-briefcase"></i> Career Journey
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">Work Experience</h2>
+                <p class="mt-3 text-slate-600 dark:text-slate-400">
+                    A track record of growing technical responsibility, maintaining enterprise uptime, and serving as a key liaison between local infrastructure and global IT engineering teams.
+                </p>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Vertical Line -->
+                <div class="hidden sm:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-slate-300 dark:bg-slate-700"></div>
+
+                <!-- Item 1 -->
+                <div class="relative mb-10 sm:mb-12">
+                    <div class="flex flex-col sm:flex-row items-center">
+                        <div class="flex justify-start w-full sm:w-1/2 sm:pr-8">
+                            <div class="w-full bg-white dark:bg-darkcard p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-brand-500 transition-colors">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Technical Support Engineer</h3>
+                                        <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Asus Philippines Corporation</p>
+                                    </div>
+                                    <span class="px-2.5 py-1 text-xs font-semibold rounded bg-brand-500/10 text-brand-500">2023 - Present</span>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mb-3"><i class="fa-solid fa-location-dot mr-1"></i> Full-Time | On-Site </p>
+                                <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-2 list-disc list-inside">
+                                    <td>Managed server deployments, hypervisor clusters, and local infrastructure operations across 3 regional sites.</td>
+                                    <td>Served as primary cross-team liaison between local operational units and HQ Senior Network Engineers.</td>
+                                    <td>Administered Microsoft 365 tenant, Azure AD user provisioning, and automated onboarding scripts.</td>
+                                    <td>Maintained an average SLA ticket resolution speed of 98.5% within Jira Service Management.</td>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 hidden sm:flex items-center justify-center w-8 h-8 rounded-full bg-brand-500 text-white border-4 border-slate-50 dark:border-darkbg shadow">
+                            <i class="fa-solid fa-server text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="relative mb-10 sm:mb-12">
+                    <div class="flex flex-col sm:flex-row items-center">
+                        <div class="flex justify-end w-full sm:w-1/2 sm:ml-auto sm:pl-8">
+                            <div class="w-full bg-white dark:bg-darkcard p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-brand-500 transition-colors">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">MIS Assistant</h3>
+                                        <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Asus Philippines Corporation</p>
+                                    </div>
+                                    <span class="px-2.5 py-1 text-xs font-semibold rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300"> May 2023 - August 2023</span>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mb-3"><i class="fa-solid fa-location-dot mr-1"></i> Full-Time | On-Site</p>
+                                <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-2 list-disc list-inside">
+                                    <td>Administered Active Directory domain services, Security Groups, and Group Policy Objects (GPOs).</td>
+                                    <td>Managed hardware asset lifecycle (ITAM) for over 250 workstations and peripheral equipment.</td>
+                                    <td>Configured Fortinet firewalls, created VPN tunnels for remote staff, and ensured secure endpoint policy compliance.</td>
+                                    <td>Reduced end-user downtime by 30% through proactive patch deployment via Windows Server Update Services (WSUS).</td>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 hidden sm:flex items-center justify-center w-8 h-8 rounded-full bg-slate-400 dark:bg-slate-600 text-white border-4 border-slate-50 dark:border-darkbg shadow">
+                            <i class="fa-solid fa-network-wired text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative">
+                    <div class="flex flex-col sm:flex-row items-center">
+                        <div class="flex justify-start w-full sm:w-1/2 sm:pr-8">
+                            <div class="w-full bg-white dark:bg-darkcard p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-brand-500 transition-colors">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">IT Hardware & Network Technician</h3>
+                                        <p class="text-sm font-semibold text-brand-600 dark:text-brand-400"> Unison Computer Systems Inc.</p>
+                                    </div>
+                                    <span class="px-2.5 py-1 text-xs font-semibold rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">2020 - 2023</span>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mb-3"><i class="fa-solid fa-location-dot mr-1"></i> Full-Time | On-Site</p>
+                                <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-2 list-disc list-inside">
+                                    <td>Executed physical rack installations, structured Ethernet cabling (Cat6), patch panel termination, and testing.</td>
+                                    <td>Handled OS installation, disk imaging (Clonezilla/Sysprep), and hardware component diagnostic repairs.</td>
+                                    <td>Provided L1/L2 desktop support for hardware failures, printers, local network issues, and software crashes.</td>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 hidden sm:flex items-center justify-center w-8 h-8 rounded-full bg-slate-400 dark:bg-slate-600 text-white border-4 border-slate-50 dark:border-darkbg shadow">
+                            <i class="fa-solid fa-screwdriver-wrench text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Training -->
+    <section id="certifications" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider mb-2">
+                    <i class="fa-solid fa-certificate"></i> Verified Knowledge
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">Certifications & Credentials</h2>
+                <p class="mt-3 text-slate-600 dark:text-slate-400">
+                    Continuous learning and industry-recognized certifications validating core networking, cloud, and security competencies.
+                </p>
+            </div>
+
+            <!-- Certs Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Cert 1 -->
+                <div class="p-6 rounded-xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-600/10 text-blue-600 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg">Cisco Certified Network Associate (CCNA)</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Cisco Systems</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3">Routing, Switching, IP Services, VLAN Security, & Network Fundamentals.</p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs">
+                        <span class="text-emerald-600 dark:text-emerald-400 font-semibold"><i class="fa-solid fa-check-circle mr-1"></i> Active</span>
+                        <span class="text-slate-400">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="p-6 rounded-xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-brands fa-aws"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg">AWS Certified Cloud Practitioner</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Amazon Web Services</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3">Cloud Architecture, IAM Roles, EC2 Compute, S3 Storage & Security Best Practices.</p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs">
+                        <span class="text-emerald-600 dark:text-emerald-400 font-semibold"><i class="fa-solid fa-check-circle mr-1"></i> Active</span>
+                        <span class="text-slate-400">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="p-6 rounded-xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-sky-500/10 text-sky-500 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-brands fa-microsoft"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg">MS-900 / AZ-900 Fundamentals</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Microsoft</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3">Microsoft 365 Cloud Services, Azure Active Directory Security, & Governance.</p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs">
+                        <span class="text-emerald-600 dark:text-emerald-400 font-semibold"><i class="fa-solid fa-check-circle mr-1"></i> Active</span>
+                        <span class="text-slate-400">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="p-6 rounded-xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-red-500/10 text-red-500 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-shield-virus"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg">Fortinet NSE Certification Highlights</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Fortinet Institute</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3">Network Security Associate, FortiGate Configuration, & Firewall Threat Management.</p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs">
+                        <span class="text-emerald-600 dark:text-emerald-400 font-semibold"><i class="fa-solid fa-check-circle mr-1"></i> Active</span>
+                        <span class="text-slate-400">Verified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-slate-100/60 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <!-- Left Info Panel -->
+                <div class="lg:col-span-5">
+                    <div class="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-envelope"></i> Get In Touch
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">Let's Discuss Your Infrastructure Needs</h2>
+                    <p class="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+                        I am currently available for full-time opportunities, high-impact contract roles, or technical support operations consulting. Reach out via email, phone, or LinkedIn.
+                    </p>
+
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center space-x-4 p-4 rounded-lg bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800">
+                            <div class="w-10 h-10 rounded-full bg-brand-500/10 text-brand-500 flex items-center justify-center">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">Email Address</p>
+                                <a href="mailto:1christian.magbanua3.com" class="font-medium text-slate-900 dark:text-white hover:text-brand-500 transition-colors">1christian.magbanua3@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 p-4 rounded-lg bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800">
+                            <div class="w-10 h-10 rounded-full bg-brand-500/10 text-brand-500 flex items-center justify-center">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">LinkedIn Profile</p>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener" class="font-medium text-slate-900 dark:text-white hover:text-brand-500 transition-colors">linkedin.com/in/cfm13</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 p-4 rounded-lg bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800">
+                            <div class="w-10 h-10 rounded-full bg-brand-500/10 text-brand-500 flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">Preferred Location</p>
+                                <p class="font-medium text-slate-900 dark:text-white">Hybrid / Remote / On-Site Relocation Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Panel -->
+                <div class="lg:col-span-7">
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)" class="p-8 rounded-2xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Send a Message</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="userName" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Your Name</label>
+                                <input type="text" id="userName" required placeholder="John Doe" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                            <div>
+                                <label for="userEmail" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email Address</label>
+                                <input type="email" id="userEmail" required placeholder="john@company.com" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Subject / Requirement</label>
+                            <input type="text" id="subject" required placeholder="IT Infrastructure Role Opportunity" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Message</label>
+                            <textarea id="message" rows="4" required placeholder="Hi Christian, we are looking for a Systems Specialist to oversee our Microsoft 365 and network migration..." class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 px-6 rounded-lg bg-brand-500 hover:bg-brand-600 text-white font-semibold shadow-lg shadow-brand-500/25 transition-all">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Submit Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-darkbg border-t border-slate-200 dark:border-slate-800 py-8 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center">
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+                &copy; <span id="currentYear"></span> Christian Magbanua. Built for IT Infrastructure & Technical Operations.
+            </p>
+            <div class="mt-4 sm:mt-0 flex justify-center space-x-6 text-slate-400">
+                <a href="#home" class="hover:text-brand-500 transition-colors"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Custom Alert Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 rounded-2xl p-6 max-w-md w-full shadow-2xl text-center">
+            <div class="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-2xl mx-auto mb-4">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Message Received!</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-6" id="modalMessage">
+                Thank you for reaching out. I will respond to your email within 24 business hours.
+            </p>
+            <button onclick="closeModal()" class="w-full py-2.5 rounded-lg bg-brand-500 text-white font-semibold hover:bg-brand-600 transition-colors">
+                Close Window
+            </button>
+        </div>
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Set dynamic year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Dark/Light Theme Switching Logic
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeToggleIcon = document.getElementById('themeToggleIcon');
+
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.toggle('dark');
+            themeToggleIcon.className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+            localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
+        });
+
+        // Initialize Theme from Preferences
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+            themeToggleIcon.className = 'fa-solid fa-sun';
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Skill Filtering Feature
+        function filterSkills(category) {
+            const cards = document.querySelectorAll('.skill-card');
+            const buttons = document.querySelectorAll('.skill-tab-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-500', 'text-white', 'shadow-md');
+                btn.classList.add('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+            });
+
+            event.target.classList.remove('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+            event.target.classList.add('bg-brand-500', 'text-white', 'shadow-md');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Copy Email to Clipboard
+        function copyEmail() {
+            const email = "1christian.magbanua3@gmail.com";
+            const dummy = document.createElement("input");
+            document.body.appendChild(dummy);
+            dummy.value = email;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+
+            const copyText = document.getElementById('copyEmailText');
+            copyText.textContent = "Email Copied!";
+            setTimeout(() => {
+                copyText.textContent = "Copy Email";
+            }, 2500);
+        }
+
+        // Resume Download Simulation
+        function downloadResume() {
+            const resumeContent = "Christian Magbanua - IT Infrastructure & Technical Support Specialist\n\nEmail: 1christian.magbanua3@gmail.com\nExperience: 5+ Years\nCertifications: CCNA, AWS Cloud, MS-900, Fortinet NSE\nSkills: Active Directory, Windows Server, Proxmox, VMware, Cisco Networking, Fortinet, Jira, Linux.";
+            const blob = new Blob([resumeContent], { type: 'pdf' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Christian_Magbanua_IT_Support_Resume.txt';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        // Form Submit Handler & Modal
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('userName').value;
+            const modal = document.getElementById('contactModal');
+            const modalMsg = document.getElementById('modalMessage');
+
+            modalMsg.textContent = `Thank you, ${name}! Your inquiry has been logged successfully. I will get back to you shortly.`;
+            modal.classList.remove('hidden');
+            document.getElementById('contactForm').reset();
+        }
+
+        function closeModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
